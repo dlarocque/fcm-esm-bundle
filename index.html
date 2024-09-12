@@ -1,0 +1,19 @@
+<html>
+<head>
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js';
+    import { getMessaging, getToken } from 'https://www.gstatic.com/firebasejs/10.13.1/firebase-messaging.js';
+
+    const app = initializeApp({
+      // TODO (you): Replace this with your Firebase project config.
+    });
+
+    const messaging = getMessaging(app);
+    getToken(messaging, {
+      vapidKey: '' // TODO (you): Replace this with your vapid key.
+    }).then(token => console.log("token:", token));
+  </script>
+</head>
+<body>
+</body>
+</html>
